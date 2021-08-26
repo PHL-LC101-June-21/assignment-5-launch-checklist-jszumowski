@@ -18,7 +18,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 
 function validateInput(testInput) {
     if (testInput == ''){
-        return 'empty';
+        return 'Empty';
     }
     if (isNaN(testInput)){
         return 'Not a Number';
@@ -47,16 +47,16 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
     faultyItems.style.visibility = 'visible';
     pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
-    copilotStatus.innerHTML = `Copilot ${copilot} is ready for launch`;
+    copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
     if (fuelLevel < 10000){
-        launchStatus.innerHTML = "Shuttle not ready for launch";
+        launchStatus.innerHTML = "Shuttle Not Neady for Naunch";
         launchStatus.style.color = 'rgb(199, 37, 78)';
-        fuelStatus.innerHTML = "There is not enough fuel for the journey";
+        fuelStatus.innerHTML = "Fuel too low for launch";
     }
     if (cargoLevel > 10000){
         launchStatus.innerHTML = "Shuttle Not Ready for Launch";
         launchStatus.style.color = 'rgb(199, 37, 78)';
-        cargoStatus.innerHTML = "Cargo mass too heavy for launch.";
+        cargoStatus.innerHTML = "Cargo mass too heavy for launch";
     }
     if (fuelLevel > 9999 && cargoLevel < 10001){
         launchStatus.innerHTML = "Shuttle is Ready for Launch";
