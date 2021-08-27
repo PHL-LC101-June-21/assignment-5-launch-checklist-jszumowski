@@ -39,7 +39,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
        alert('All fields required.');
    }
    if (validateInput(fuelLevel) === 'Empty' || validateInput(cargoLevel) === 'Empty'){
-    alert('All fields required.');
+        alert('All fields required.');
     }
    if (validateInput(fuelLevel) === 'Not a Number' || validateInput(cargoLevel) === 'Not a Number'){
        alert('Fuel and Cargo Level must be numbers');
@@ -61,6 +61,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     if (fuelLevel > 9999 && cargoLevel < 10000){
         launchStatus.innerHTML = "Shuttle is Ready for Launch";
         launchStatus.style.color = 'rgb(65, 159, 106)';
+        fuelStatus.innerHTML = "Fuel level high enough for launch";
+        cargoStatus.innerHTML = "Cargo mass low enough for launch";
     }
 }
 
